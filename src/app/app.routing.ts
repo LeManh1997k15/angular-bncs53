@@ -3,7 +3,8 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import {LoginComponent} from './login/login.component';
 const routes: Routes =[
   {
     path: '',
@@ -15,8 +16,21 @@ const routes: Routes =[
     children: [
         {
       path: '',
-      loadChildren: './admin-layout/admin-layout.module#AdminLayoutModule'
-  }]}
+      loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
+  }]},
+  {
+    path: 'login',
+    component: LoginComponent
+  }
+    // { path: 'dashboard',      component: DashboardComponent },
+    // { path: 'user-profile',   component: UserProfileComponent },
+    // { path: 'table-list',     component: TableListComponent },
+    // { path: 'typography',     component: TypographyComponent },
+    // { path: 'icons',          component: IconsComponent },
+    // { path: 'maps',           component: MapsComponent },
+    // { path: 'notifications',  component: NotificationsComponent },
+    // { path: 'upgrade',        component: UpgradeComponent },
+    // { path: '',               redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({
