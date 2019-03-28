@@ -1,0 +1,211 @@
+<div class="logo">
+    <a class="simple-text">
+        <div class="logo-img logo-mini" style="margin-left: 5px">
+            <img src="/assets/img/angular2-logo-red.png" />
+        </div>
+
+    </a>
+    <a class="simple-text logo-normal" style="margin-top: -10px" href="/"> WH System </a>
+</div>
+
+<div class="sidebar-wrapper">
+    <ul class="nav">
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
+            <a class="nav-link" [routerLink]="[menuItem.path]">
+                <i class="material-icons" style="margin-left: -5px;">{{menuItem.icon}}</i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+            <!---->
+            <!----><a class="nav-link collapsed" data-toggle="collapse" href="#setup" aria-expanded="true"><i
+                    class="material-icons" style="margin-left:-5px;">build</i>
+                <p>Thiết lập<b class="caret"></b></p>
+            </a>
+            <!---->
+            <div class="collapse" id="setup" style="">
+                <ul class="nav">
+                    <!---->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/warehouse">
+                            <span class="sidebar-mini" style="margin-left:-5px;"> K</span>
+                            <span class="sidebar-normal">Quản lý kho</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/user">
+                            <span class="sidebar-mini" style="margin-left:-5px;">U</span>
+                            <span class="sidebar-normal">Quản lý người dùng</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+            <!---->
+            <!----><a class="nav-link collapsed" data-toggle="collapse" href="#material" aria-expanded="true"><i
+                    class="material-icons" style="margin-left:-5px;">layers</i>
+                <p>Vật liệu<b class="caret"></b></p>
+            </a>
+            <!---->
+            <div class="collapse" id="material" style="">
+                <ul class="nav">
+                    <!---->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/vatlieu">
+                            <span class="sidebar-mini" style="margin-left:-5px;">VL</span>
+                            <span class="sidebar-normal">Quản lý vật liệu</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/gia">
+                            <span class="sidebar-mini" style="margin-left:-5px;">G</span>
+                            <span class="sidebar-normal">Thiết lập giá</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+            <!---->
+            <!----><a class="nav-link collapsed" data-toggle="collapse" href="#exchange" aria-expanded="true"><i
+                    class="material-icons" style="margin-left:-5px;">swap_horiz</i>
+                <p>Giao dịch<b class="caret"></b></p>
+            </a>
+            <!---->
+            <div class="collapse" id="exchange" style="">
+                <ul class="nav">
+                    <!---->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/hoadon">
+                            <span class="sidebar-mini" style="margin-left:-5px;">HD</span>
+                            <span class="sidebar-normal">Hóa đơn</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/trahang">
+                            <span class="sidebar-mini" style="margin-left:-5px;">TrH</span>
+                            <span class="sidebar-normal">Trả hàng</span>
+                        </a>
+                    </li>
+                    <!---->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/warehousing">
+                            <span class="sidebar-mini" style="margin-left:-5px;">NK</span>
+                            <span class="sidebar-normal">Nhập kho</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/tranhapkho">
+                            <span class="sidebar-mini" style="margin-left:-5px;">TrNK</span>
+                            <span class="sidebar-normal">Trả nhập kho</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/chuyenkho">
+                            <span class="sidebar-mini" style="margin-left:-5px;">CK</span>
+                            <span class="sidebar-normal">Chuyển kho</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+            <!---->
+            <!----><a class="nav-link collapsed" data-toggle="collapse" href="#partner" aria-expanded="true"><i
+                    class="material-icons" style="margin-left:-5px;">people</i>
+                <p>Đối tác<b class="caret"></b></p>
+            </a>
+            <!---->
+            <div class="collapse" id="partner" style="">
+                <ul class="nav">
+                    <!---->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/khachhang">
+                            <span class="sidebar-mini" style="margin-left:-5px;">KH</span>
+                            <span class="sidebar-normal">Khách hàng</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/nhacungcap">
+                            <span class="sidebar-mini" style="margin-left:-5px;">NCC</span>
+                            <span class="sidebar-normal">Nhà cung cấp</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+            <!---->
+            <!----><a class="nav-link collapsed" data-toggle="collapse" href="#report" aria-expanded="true"><i
+                    class="material-icons" style="margin-left:-5px;">pie_chart</i>
+                <p>Báo cáo<b class="caret"></b></p>
+            </a>
+            <!---->
+            <div class="collapse" id="report" style="">
+                <ul class="nav">
+                    <!---->
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/baocao/cuoingay">
+                            <span class="sidebar-mini" style="margin-left:-5px;">BCCN</span>
+                            <span class="sidebar-normal">Cuối ngày</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/baocao/xuatkho">
+                            <span class="sidebar-mini" style="margin-left:-5px;">BCXK</span>
+                            <span class="sidebar-normal">Xuất kho</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" routerLinkActive="active">
+                        <a class="nav-link" routerLink="/baocao/nhapkho">
+                            <span class="sidebar-mini" style="margin-left:-5px;">BCNK</span>
+                            <span class="sidebar-normal">Nhập kho</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <div *ngIf="isMobileMenu()">
+        <ul class="nav navbar-nav nav-mobile-menu">
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#pablo" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="material-icons">notifications</i>
+                    <span class="notification">5</span>
+                    <p>
+                        <span class="d-lg-none d-md-block">Thông báo</span>
+                    </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Mike John responded to your email</a>
+                    <a class="dropdown-item" href="#">You have 5 new tasks</a>
+                    <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                    <a class="dropdown-item" href="#">Another Notification</a>
+                    <a class="dropdown-item" href="#">Another One</a>
+                </div>
+            </li>
+            <li class="active-pro nav-item dropdown ">
+                <a class="nav-link" href="#pablo" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="material-icons">person</i>
+                    <p>
+                        <span class="d-lg-none d-md-block">Tài khoản</span>
+                    </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Thông tin</a>
+                    <a class="dropdown-item" href="#">Đăng xuất</a>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
